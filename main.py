@@ -108,9 +108,13 @@ class Game:
         for round in range(3):
             print(f"Round {round+1}:")
             self.play_round()
+            print(f"Player 1 score is: {self.p1.score}")
+            print(f"Player 2 score is: {self.p2.score}")
         if self.p1.score > self.p2.score:
+            print(f"Final Game Score: {self.p1.score}/{self.p2.score}")
             print("__Player 1 wins the game!__")
         else:
+            print(f"Final Game Score: {self.p1.score}/{self.p2.score}")
             print("__Player 2 wins the game!__")
         print("Game over!")
 
