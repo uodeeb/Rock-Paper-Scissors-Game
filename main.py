@@ -13,6 +13,14 @@ class Player:
         pass
 
 
+class RockPlayer(Player):
+    def move(self):
+        return 'rock'
+
+    def learn(self, my_move, their_move):
+        pass
+
+
 class RandomPlayer(Player):
     def move(self):
         return random.choice(self.moves)
@@ -54,7 +62,7 @@ class ReflectPlayer(Player):
 
     def learn(self, my_move, their_move):
         self.my_move = their_move
-        return my_move
+        return self.my_move
 
 
 class CyclePlayer(Player):
